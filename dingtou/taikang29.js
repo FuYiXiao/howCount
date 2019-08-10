@@ -3,22 +3,22 @@ define( ['../js/type.js'], function (Type) {
 	var BuyList = [
 
 		{
-			date:"2019-07-21",
-			Money:1000
+			date:"2019-07-18",
+			Money:5000
 		}
 
 	];
 
 	// 最终的收益结果
-	var Result = 1001.38;
-    var EndData = "2019-08-07"
+	var Result = 5010.21;
+    var EndData = "2019-08-10"
 
     //Do setup work here
     return {
 
-    	name:"泰康安泰15天",
+    	name:"泰康安泰29天",
 
-    	id:2019081001,
+    	id:2019081002,
 
     	type:Type.typeA,
 
