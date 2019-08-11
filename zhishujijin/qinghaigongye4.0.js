@@ -3,19 +3,19 @@ define( ['../js/type.js'], function (Type) {
 	//从上到下
 	var BuyList = [
 		{
-			date:"2019-07-16",
+			date:"2019-07-17",
 			Money:135
 		},
 		{
-			date:"2019-07-23",
+			date:"2019-07-24",
 			Money:135
 		},	
 		{
-			date:"2019-07-30",
+			date:"2019-07-31",
 			Money:135
 		},		
 		{
-			date:"2019-08-06",
+			date:"2019-08-07",
 			Money:135
 		},
 
@@ -25,18 +25,18 @@ define( ['../js/type.js'], function (Type) {
 	];
 
 	// 最终的收益结果
-	var ResultMoney = 525.53;
+	var ResultMoney = 533.18;
 	var EndData ;
 
     //Do setup work here
     return {
 
-    	name:"兴全沪深300指数增强LOF",
+    	name:"前海开源工业4.0",
 
     	id:2019081003,
 
     	//类型
-    	type:Type.type1,
+    	type:Type.type4,
 
     	// 其他信息
     	info: '定投',

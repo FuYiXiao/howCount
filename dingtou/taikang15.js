@@ -1,5 +1,5 @@
 define( ['../js/type.js'], function (Type) {
-
+    //购买清单
 	var BuyList = [
 
 		{
@@ -10,29 +10,38 @@ define( ['../js/type.js'], function (Type) {
 	];
 
 	// 最终的收益结果
-	var Result = 1001.38;
-    var EndData = "2019-08-07"
+	var ResultMoney = 1001.38;
+    //结束日期
+    var EndData = "2019-08-07";
 
-    //Do setup work here
+   
     return {
 
     	name:"泰康安泰15天",
 
     	id:2019081001,
 
+        //类型
     	type:Type.typeA,
+        // 其他信息
+    	info: '15天',
 
-    	info: '买入',
-
+        // 是否已经停止
+        hasEnd:(typeof EndData == 'undefined' ? false : true),
+        
+        // 花费时间
     	costData: Type.costData(BuyList,EndData),
-
+        // 购买清单
     	BuyList: BuyList,
 
     	// 计算的年化率
-    	NianHuaLv: Type.NianHuaLv(BuyList,Result),
+    	NianHuaLv: Type.NianHuaLv(BuyList,ResultMoney),
 
-    	// 最终结果
-    	Result:Result
+    	// 最终金额
+    	ResultMoney:ResultMoney,
+
+        // 初始金额
+        Startoney:Type.totalMoney(BuyList) 
 
     }
 

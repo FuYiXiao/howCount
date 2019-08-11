@@ -10,20 +10,20 @@ define( ['../js/type.js'], function (Type) {
 	];
 
 	// 最终的收益结果
-	var ResultMoney = 5010.21;
+	var ResultMoney = 5010.23;
     //结束日期
     var EndData ;
 
     //Do setup work here
     return {
 
-    	name:"泰康安泰29天",
+    	name:"安邦31天",
 
     	id:2019081002,
         //类型
     	type:Type.typeA,
         // 其他信息
-    	info: '29天',
+    	info: '31天',
 
     	costData: Type.costData(BuyList,EndData),
 

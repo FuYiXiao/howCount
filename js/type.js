@@ -4,7 +4,7 @@ define(function () {
     //Do setup work here
     return {
 
-    	typeA:'定期',
+    	typeA:'整存',
 
     	typeB:'股票',
 
@@ -43,13 +43,13 @@ define(function () {
 
     	/** 年化率计算
     	**/
-    	NianHuaLv:function(BuyList,Result){
+    	NianHuaLv:function(BuyList,ResultMoney){
 
             var arrayLength = BuyList.length;
             var nianHuaLV = null;
 
             if(arrayLength==1){
-                return nianHuaLV = ((Result - BuyList[0].Money)/BuyList[0].costDate * 365) / Result * 100;
+                return nianHuaLV = ((ResultMoney - BuyList[0].Money)/BuyList[0].costDate * 365) / ResultMoney * 100;
             }else{
                 var middleNum = 0;
                 var totalMoney = 0;
@@ -57,11 +57,26 @@ define(function () {
                     middleNum = middleNum + BuyList[i].Money*BuyList[i].costDate/365;
                     totalMoney = totalMoney + BuyList[i].Money;
                 }
-                return  nianHuaLV = (Result - totalMoney ) / middleNum * 100;    
+                return  nianHuaLV = (ResultMoney - totalMoney ) / middleNum * 100;    
             }
 
 
-    	}
+    	},
+        /** 本金计算
+        **/
+        totalMoney:function(BuyList){
+            var arrayLength = BuyList.length;
+            var totalMoney = null;
+
+            if(arrayLength==1){
+                return totalMoney = BuyList[0].Money;
+            }else{
+                for(var i = 0 ; i < arrayLength; i++ ){
+                    totalMoney = totalMoney + BuyList[i].Money;
+                }
+                return  totalMoney ;    
+            }
+        }
 
     }
 

@@ -4,19 +4,19 @@ define( ['../js/type.js'], function (Type) {
 	var BuyList = [
 		{
 			date:"2019-07-16",
-			Money:135
+			Money:18
 		},
 		{
 			date:"2019-07-23",
-			Money:135
+			Money:18
 		},	
 		{
 			date:"2019-07-30",
-			Money:135
+			Money:18
 		},		
 		{
 			date:"2019-08-06",
-			Money:135
+			Money:18
 		},
 
 
@@ -25,18 +25,18 @@ define( ['../js/type.js'], function (Type) {
 	];
 
 	// 最终的收益结果
-	var ResultMoney = 525.53;
+	var ResultMoney = 69.86;
 	var EndData ;
 
     //Do setup work here
     return {
 
-    	name:"兴全沪深300指数增强LOF",
+    	name:"易方达消费行业股票",
 
     	id:2019081003,
 
     	//类型
-    	type:Type.type1,
+    	type:Type.type3,
 
     	// 其他信息
     	info: '定投',
